@@ -7,16 +7,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #6d5dfc;
-            --secondary: #e0e5ec;
-            --accent: #ff7e67;
+            /* Warm, Cozy Color Palette */
+            --primary: #5d8e7d;      /* Calm Sage Green */
+            --secondary: #f4f1ea;    /* Warm Cream */
+            --accent: #d97757;       /* Soft Terracotta */
             --whatsapp: #25d366;
-            --dark: #2d3436;
-            --light: #f9f9f9;
+            --dark: #3e3a36;        /* Deep Charcoal Brown */
+            --light: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        body { background-color: var(--secondary); color: var(--dark); line-height: 1.6; }
 
         /* Navigation */
         nav {
@@ -29,7 +30,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
@@ -38,10 +39,11 @@
         .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Hero */
+        /* Hero with Cozy Sleeping Cat Background */
         .hero {
-            height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            height: 70vh;
+            /* High-quality cozy cat background */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -52,7 +54,8 @@
             text-align: center;
             padding: 0 20px;
         }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.2rem; background: rgba(0,0,0,0.2); padding: 5px 15px; border-radius: 5px; }
 
         /* Floating WhatsApp */
         .whatsapp-float {
@@ -87,13 +90,14 @@
         }
         .card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
+            padding: 2.5rem;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
             transition: 0.3s;
+            border-bottom: 4px solid transparent;
         }
-        .card:hover { transform: translateY(-5px); }
+        .card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--primary); }
         .card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; }
 
         /* Policy Styling */
@@ -102,39 +106,43 @@
             margin: 0 auto;
             background: white;
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         .policy-item { margin-bottom: 25px; }
-        .policy-item h3 { color: var(--primary); margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .policy-item h3 { color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid var(--secondary); padding-bottom: 5px; font-size: 1.2rem; }
         .policy-item ul { list-style: none; padding-left: 5px; }
-        .policy-item li { margin-bottom: 8px; position: relative; padding-left: 20px; }
-        .policy-item li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
+        .policy-item li { margin-bottom: 8px; position: relative; padding-left: 25px; }
+        .policy-item li::before { content: "🐾"; position: absolute; left: 0; font-size: 0.9rem; }
 
         /* Contact Section */
-        .contact { display: flex; flex-wrap: wrap; gap: 4rem; background: white; }
+        .contact { display: flex; flex-wrap: wrap; gap: 4rem; background: white; border-radius: 30px; margin: 0 5% 5rem 5%; padding: 4rem; }
         .contact-info, .contact-action { flex: 1; min-width: 300px; }
+        
         .whatsapp-btn {
             background-color: var(--whatsapp);
             color: white;
-            padding: 18px;
+            padding: 20px;
             text-align: center;
             display: block;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 15px;
             font-weight: bold;
             font-size: 1.2rem;
             margin-top: 20px;
             transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
         .whatsapp-btn:hover { background-color: #1ebe57; transform: scale(1.02); }
 
-        footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
+        footer { background: var(--dark); color: white; padding: 3rem; text-align: center; }
+        .eco-badge { font-size: 0.8rem; opacity: 0.7; margin-top: 10px; display: block; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             section { padding: 3rem 5%; }
             .nav-links { display: none; }
+            .contact { margin: 0 0 3rem 0; padding: 2rem; border-radius: 0; }
         }
     </style>
 </head>
@@ -156,7 +164,17 @@
 
     <section class="hero" id="home">
         <h1>Purring Cat Boarding</h1>
-        <p>Your cat's safe, loving, and stress-free home in New Ashok Nagar, Delhi</p>
+        <p>A peaceful, cage-free homestay for your feline friends in New Ashok Nagar.</p>
+    </section>
+
+    <section id="gallery" style="text-align: center; padding-top: 4rem;">
+        <h2 class="section-title">Our Happy Guests</h2>
+        <p style="margin-top: -2.5rem; margin-bottom: 2rem;">Meet some of our lovely cat visitors</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipObEUvm6G4Hu2NnEY4kvY-cNY0eIN1M7xIiizCh=s1360-w1360-h1020-rw" style="width: 250px; height: 200px; object-fit: cover; border-radius: 15px;">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPR_IYoD5BD09mG3v8ztMgMZz1ARN46MQXo1QEJ=w141-h141-n-k-no-nu" style="width: 250px; height: 200px; object-fit: cover; border-radius: 15px;">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNQrYZMU54Xx_dTEFuyMneqrmnymA0pzajnid8N=s1360-w1360-h1020-rw" style="width: 250px; height: 200px; object-fit: cover; border-radius: 15px;">
+        </div>
     </section>
 
     <section class="services" id="services">
@@ -188,15 +206,15 @@
     <section class="policy-section" id="policy">
         <h2 class="section-title">Boarding Policy</h2>
         <div class="policy-content">
-            <p style="margin-bottom: 2rem; text-align: center; font-weight: 500;">Please read our policy carefully to ensure a calm and hygienic experience for every guest.</p>
+            <p style="margin-bottom: 2rem; text-align: center; font-weight: 500; color: var(--accent);">Ensuring a safe and healthy stay for all our guests.</p>
 
             <div class="policy-item">
                 <h3>1. HEALTH & SAFETY</h3>
                 <ul>
                     <li>Cats must be healthy and free from contagious diseases.</li>
                     <li>Vaccinations should be up to date.</li>
-                    <li>Ongoing medical conditions or allergies must be informed in advance.</li>
-                    <li>We may refuse boarding for cats showing parasites or aggressive behavior.</li>
+                    <li>Ongoing medical conditions must be informed in advance.</li>
+<li>We may refuse boarding for cats showing parasites or aggressive behavior.</li>
                 </ul>
             </div>
 
@@ -204,7 +222,7 @@
                 <h3>2. PET PARENT VERIFICATION</h3>
                 <ul>
                     <li><strong>Valid current address proof</strong> of the pet parent is mandatory.</li>
-                    <li>Required for security, emergency contact, and record-keeping.</li>
+                    <li>Required for security and emergency contact.</li>
                 </ul>
             </div>
 
@@ -224,58 +242,53 @@
                 </ul>
             </div>
 
+
             <div class="policy-item">
-                <h3>5. FREE ROAMING POLICY</h3>
+                <h3>5. FREE ROAMING</h3>
                 <ul>
-                    <li>Friendly cats may get free access to the home after 24–48 hours of observation.</li>
-                    <li>Decision is taken solely by us based on adaptability and safety.</li>
+                    <li>Friendly cats may roam freely after 24–48 hours of observation.</li>
+                    <li>Subject to behavior and adaptability.</li>
                 </ul>
             </div>
 
             <div class="policy-item">
-                <h3>8. PICKUP & DROP FACILITY</h3>
+                <h3>6. PICKUP & DROP</h3>
                 <ul>
-                    <li>Free up to 10 km for: Single cat (Min 5 days) / Multiple cats (Min 3 days).</li>
-                    <li>Beyond 10 km or shorter stays may be chargeable.</li>
+                    <li>Free up to 8 km for stays over 5 days (Single cat) or 3 days (Multiple cats).</li>
+                    <li>Beyond 8 km or shorter stays may be chargeable.</li>
+
                 </ul>
             </div>
 
             <div class="policy-item">
-                <h3>10. EMERGENCY CARE</h3>
-                <ul>
-                    <li>Parents informed immediately in case of medical emergency.</li>
-                    <li>Medical expenses incurred will be borne by the pet parent.</li>
-                </ul>
-            </div>
-
-            <div class="policy-item">
-                <h3>11. DISCLAIMER</h3>
-                <p><em>While all care is taken, Purring Cat Boarding is not responsible for stress-related issues, pre-existing conditions, or unforeseen health events.</em></p>
+                <h3>5. EMERGENCY</h3>
+                <p><em>Parents informed immediately. All medical expenses borne by pet parent.</em></p>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
         <div class="contact-info">
-            <h2 style="margin-bottom: 1.5rem;">Visit Us</h2>
-            <p><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i> New Ashok Nagar, Delhi, India</p>
-            <p><i class="fas fa-phone" style="color:var(--accent)"></i> +91 85859 47301</p>
-            <p><i class="fas fa-clock" style="color:var(--accent)"></i> Mon-Fri: 6:30 AM - 10:00 PM</p>
+            <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Visit Us</h2>
+            <p><i class="fas fa-map-marker-alt" style="color:var(--accent); width: 25px;"></i> New Ashok Nagar, Delhi</p>
+            <p><i class="fas fa-phone" style="color:var(--accent); width: 25px;"></i> +91 85859 47301</p>
+            <p><i class="fas fa-clock" style="color:var(--accent); width: 25px;"></i> 6:30 AM - 10:00 PM</p>
             <br>
-            <a href="https://share.google/b0IAqX1Q5bFSKCTry" target="_blank" style="color: var(--primary); font-weight: bold; text-decoration: none;">View on Google Maps →</a>
+            <a href="https://share.google/b0IAqX1Q5bFSKCTry" target="_blank" style="color: var(--primary); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--primary);">Open in Google Maps →</a>
         </div>
         
         <div class="contact-action">
-            <h2 style="margin-bottom: 1.5rem;">Book a Stay</h2>
-            <p>Ready to give your cat a vacation? Message us on WhatsApp for instant availability and booking.</p>
+            <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Book a Stay</h2>
+            <p>Ready to give your cat a vacation? Message us on WhatsApp for instant booking.</p>
             <a href="https://wa.me/918585947301?text=Hi!%20I'd%20like%20to%20book%20a%20stay%20for%20my%20cat." class="whatsapp-btn">
-                <i class="fab fa-whatsapp"></i> Chat with us: 85859 47301
+                <i class="fab fa-whatsapp"></i> Chat now: 85859 47301
             </a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Purring Cat Boarding. Cared for with love, patience, and responsibility.</p>
+        <p>© 2026 Purring Cat Boarding. Cared for with love and patience.</p>
+        <span class="eco-badge">We support a clean Delhi & follow Yamuna-friendly disposal practices.</span>
     </footer>
 
 </body>
